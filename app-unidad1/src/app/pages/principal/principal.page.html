@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- interpolacion de variables -->
+    <ion-title>Bienvenido  {{ ussuario }}</ion-title>
+    <ion-button slot="end">
+      <ion-icon (click)="cerrarSession()" slot="icon-only" name="close-circle-sharp"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <p> {{ ussuario }}</p>
+  <p>{{ contrasena }}</p>
+
+</ion-content>

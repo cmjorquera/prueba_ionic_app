@@ -1,0 +1,135 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+// @import "@ionic/angular/css/palettes/dark.system.css";
+
+/* Estilos para la página de login */
+.login-page {
+  --background: #1a2b49; /* Fondo azul oscuro */
+}
+
+.login-container {
+  // display: flex;
+  flex-direction: column;
+  align-items: center; /* Mantiene centrada la imagen horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  height: 100%; /* Ocupa toda la pantalla */
+  padding: 20px;
+}
+
+.login-icon {
+  font-size: 60px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.login-title {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+ion-item {
+  background-color: transparent;
+  --highlight-background: transparent;
+  margin-bottom: 15px;
+  width: 100%; /* Ancho completo */
+  max-width: 300px; /* Máximo ancho para que no sea demasiado grande */
+}
+
+ion-label {
+  color: white;
+}
+
+ion-input {
+  color: white;
+  --background: #1a2b49;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%; /* Asegura que ocupe el 100% del ion-item */
+  max-width: 300px; /* Establece un ancho máximo */
+}
+
+ion-input:focus {
+  outline: none; /* Elimina cualquier borde extraño al hacer foco */
+  box-shadow: none; /* Evita cambios visuales al enfocarse */
+}
+
+/* Asegura que ion-item no cambie su apariencia al enfocarse */
+ion-item[focused] {
+  border: none;
+  --background: transparent;
+}
+
+/* Para asegurar que el estilo de los inputs no cambie en dispositivos móviles */
+input, ion-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+/* Estilo para el texto de "Olvidaste la clave?" */
+.forgot-password {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #b0c4de;
+  font-size: 14px;
+}
+
+/* Estilo del botón de login */
+.login-button {
+  margin-top: 20px;
+  --background: #3b5998;
+  --color: white;
+  width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+  max-width: 300px; /* Máximo ancho para el botón */
+}
+
+// /* Estilo para los términos y condiciones */
+.terms-conditions {
+  margin-top: 20px;
+  color: #b0c4de;
+  font-size: 14px;
+}
+
+ion-fab-button {
+  --background: #3b5998;
+}
+
+/* Metaetiqueta para evitar el zoom al hacer clic en los inputs en dispositivos móviles */
+// <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">

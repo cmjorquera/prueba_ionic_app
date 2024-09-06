@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="login-page">
+  <div class="login-container">
+    
+    <!-- Icono de usuario -->
+    <ion-icon name="person-circle-outline" class="login-icon"></ion-icon>
+    
+    <!-- Título de la página -->
+    <h1 class="login-title">Iniciar Sesión</h1>
+    
+    <!-- Campo de usuario -->
+    <ion-item>
+      <!-- <ion-label position="floating">Usuario</ion-label> -->
+      <ion-input [(ngModel)]="mdl_user" type="text" placeholder="Ingresa tu usuario"></ion-input>
+    </ion-item>
+    
+    <!-- Campo de contraseña -->
+    <ion-item>
+      <!-- <ion-label position="floating">Contraseña</ion-label> -->
+      <ion-input [(ngModel)]="mdl_pass" type="password" placeholder="Ingresa tu contraseña"></ion-input>
+      <ion-icon name="eye" slot="end"></ion-icon>
+    </ion-item>
+    
+    <!-- Mensaje de advertencia si los campos están vacíos o las credenciales son incorrectas -->
+    <ion-text *ngIf="visibleWarning" color="danger" class="ion-padding-top">
+      <p>{{ warningMessage }}</p>
+    </ion-text>
+    
+    <!-- Botón para iniciar sesión -->
+    <ion-button (click)="login()" expand="block" class="login-button">
+      <ion-spinner *ngIf="visibleLoading" name="lines-sharp"></ion-spinner>
+      Entrar
+    </ion-button>
+    
+    <!-- Enlace de 'Olvidaste la contraseña?' -->
+    <ion-text class="forgot-password">
+      <a href="#">¿Olvidaste tu contraseña?</a>
+    </ion-text>
+
+    <!-- Botón flotante para agregar un usuario (abre el modal) -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="presentModal()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    
+  </div>
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Página Principal</ion-title>
+
+    <!-- Iconos a la derecha en la barra de herramientas -->
+    <ion-buttons slot="end">
+      <!-- Ícono de notificaciones -->
+      <ion-button>
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
+
+      <!-- Ícono de usuario -->
+      <ion-button>
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <!-- Mensaje de bienvenida -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Bienvenido a la Página Principal</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Esta es la página a la que accedes después de iniciar sesión.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Opciones disponibles en la página principal -->
+  <ion-list>
+    <ion-item button (click)="navigateTo('perfil')">
+      <ion-icon name="person" slot="start"></ion-icon>
+      Perfil de Usuario
+    </ion-item>
+
+    <ion-item button (click)="navigateTo('configuracion')">
+      <ion-icon name="settings" slot="start"></ion-icon>
+      Configuración
+    </ion-item>
+
+    <ion-item button (click)="logout()">
+      <ion-icon name="log-out-outline" slot="start"></ion-icon>
+      Cerrar Sesión
+    </ion-item>
+  </ion-list>
+</ion-content>
